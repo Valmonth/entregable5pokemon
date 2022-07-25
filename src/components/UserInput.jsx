@@ -4,8 +4,17 @@ import { trainerInput } from '../store/slices/trainerInput.slice';
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { trainerName } from '../store/slices/trainerInput.slice';
 import { useDispatch } from 'react-redux';
+import { useMediaQuery } from 'react-responsive'
 
 const UserInput = () => {
+
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-width: 1224px)'
+      })
+      const isBigScreen = useMediaQuery({ query: '(min-width: 1824px)' })
+      const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+      const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
+      const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
 
     const navigate = useNavigate();
     const [nameTrainer, SetNameTrainer ] = useState("")
@@ -23,6 +32,7 @@ const submit = e => {
 
     return (
         <div className='user-interface'>
+            
         <h2 className='title-user'>Pokemon Trainer Name</h2>
         <div className='img-professor' >
             <img className='professor' src='src/img/poak.png' />
@@ -33,7 +43,6 @@ const submit = e => {
                 to continue please type your name</h4>
         </article>
         </div>
-        
         <div className='login'>
             <form className='form' onSubmit={submit}>
             <label className='trainerLabel'>Type your name: </label>

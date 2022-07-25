@@ -383,4 +383,35 @@ body{
 .pkmNumber{
   color: brown;
 }
-
+.pkmHW{
+    background-color: white;
+    margin: 5px;
+    max-width: 200px;
+}
+.pkmTypes{
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+}
+.typeCard{
+    background-color: white;
+    margin: 5px;
+    max-width: 200px;
+}
+.items {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -10px;
+	margin-top: -10px;
+    text-align: center;
+}
+.items .item {
+  flex: 1 0 calc(15% - 15px);
+  box-sizing: border-box;
+  background: #e0ddd5;
+  color: #b18606;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 15px;
+  margin-top: 15px;
+}

@@ -20,9 +20,9 @@ const Pkm = () => {
             <div >
                 <img className='pkmImgInfo' src={pokemon.sprites?.other?.home?.front_default}/>
             </div>
-            <div className='pkmHW'>
-            <p>Height: {pokemon.height}</p>
-            <p>Weight: {pokemon.weight}</p>
+            <div >
+            <p className='pkmHW'>Height: {pokemon.height}</p>
+            <p className='pkmHW'>Weight: {pokemon.weight}</p>
             </div>
         </section>
         </div>

@@ -6,18 +6,20 @@ import { useParams } from 'react-router-dom';
 const PkmType = () => {
     const { id } = useParams()
     const [ type, useType ] = useState([]);
-    const [pokemon, setPokemon] = useState({});
+    const [pokemon, setPokemon] = useState([]);
     useEffect(() =>{
         axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
         .then(res => setPokemon(res.data.types));
        },[])
-console.log(pokemon)
+
     return (
         <div>
-            <div>
-                {/* {type.map(types =>(
-                   
-                ))} */}
+            <h3>Type</h3>
+            <div className='pkmTypes'>
+                {pokemon.map(pkt => (
+                   <div className='typeCard' key={pkt.type?.name}>{pkt.type?.name}</div> 
+                ))}
+           
             </div>
         </div>
     );
