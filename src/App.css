@@ -365,3 +365,22 @@ body{
  margin: 10px;
 }
 
+.pkmBox{
+  display: flex;
+  border: 1px solid red;
+}
+
+.pkmInfo{
+  display: inherit;
+  align-items: center;
+}
+
+.pkmTitle{
+  color: chocolate;
+  margin-bottom: 19rem;
+  margin-left: 19rem;
+}
+.pkmNumber{
+  color: brown;
+}
+

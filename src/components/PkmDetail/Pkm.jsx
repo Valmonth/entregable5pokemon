@@ -11,11 +11,12 @@ const Pkm = () => {
      axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
      .then(res => setPokemon(res.data));
     },[])
- console.log(pokemon)
+ 
     return (
         <div className='pkmBox'>
             <section className='pkmInfo'>
             <h2 className='pkmTitle'>Pokemon Name: {pokemon.name}</h2>
+            <p className='pkmNumber'>Pokedex Number: {pokemon.id}</p>
             <div >
                 <img className='pkmImgInfo' src={pokemon.sprites?.other?.home?.front_default}/>
             </div>
