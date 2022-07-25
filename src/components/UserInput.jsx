@@ -25,7 +25,7 @@ const submit = e => {
         <div className='user-interface'>
         <h2 className='title-user'>Pokemon Trainer Name</h2>
         <div className='img-professor' >
-            <img className='professor' src='src/img/oak.webp' />
+            <img className='professor' src='https://static.wikia.nocookie.net/espokemon/images/0/0a/Profesor_Oak_%28XY%29.png/revision/latest?cb=20141130014622' />
         </div>
         <div className='text-box'>
         <article className='typewriter title-user'>
