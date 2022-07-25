@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import PokemonItem from './PokemonItem';
+import logo from '../img/pokemon.png'
 
 
 const Pokemon = () => {
@@ -44,14 +45,19 @@ axios.get(e.target.value)
     return (
         <div >
             <div><Link to="/">Exit From Pokedex</Link></div>
+            <div>
+                <img className='pkm-logo' src={logo} alt="" />
+            </div>
             <h2 className='title'>Welcome {trainer}</h2>
-            <p>This is a Pokemon Dexter</p>
-            <form onSubmit={search}>
+            <p className='txt'>This is a Pokemon Dexter</p>
+            <form className='search' onSubmit={search}>
                 <input
+                className='input-pkm'
+                placeholder='Type the pokemon name or number'
                 value={pkmSearch}
                 onChange={e => setPkmSearch(e.target.value)}
                 />
-                <button>Search Pokemon</button>
+                <button className='btn-search'>Search Pokemon</button>
             </form>
             <select onChange={filterPkm}>
                 <option value="">Choose Pokemon Type</option>

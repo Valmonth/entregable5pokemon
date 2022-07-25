@@ -10,6 +10,7 @@ import PkmType from './PkmDetail/PkmType';
 const PokemonItem = ( {pkmUrl} ) => {
  const [pokemon, setPokemon] = useState({})
  const [type, setType] = useState([])
+ const [bgcolor, setBgcolor] = useState('bg-card-pk')
  useEffect(() =>{
     axios.get(pkmUrl)
     .then(res => setPokemon(res.data))
@@ -19,11 +20,12 @@ const PokemonItem = ( {pkmUrl} ) => {
     axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon.id}`)
     .then(res => setType(res.data?.types))
  },[pokemon])
-console.log(type)
+
+
  const navigate = useNavigate();
     return (
         <div className='card-1 card-div' onClick={() => navigate(`/pokemonDetail/${pokemon.id}`)}>
-            <div className='gow-img-div img-div'>
+            <div className={`gow-img-div img-div ${bgcolor}`}>
                 <img className='pkmImg' src={pokemon.sprites?.other?.home?.front_default}/>
             </div>
             <div className='text-container'>

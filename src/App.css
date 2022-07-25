@@ -138,9 +138,18 @@ body{
 }
 
 
-/* God of war image and heart-background*/
+
 .gow-img-div{
+    background-color: var(--pkm-normal);
+}
+.bg-card-pk{
+    background-color: var(--pkm-fire);
+}
+.bg-bug{
     background-color: var(--pkm-bug);
+}
+.bg-ice{
+    background-color: var(--pkm-ice);
 }
 
 .gow-img-div img{
@@ -414,4 +423,42 @@ body{
   padding: 10px;
   margin-left: 15px;
   margin-top: 15px;
+}
+
+.title{
+    text-align: center;
+    font-size: 33px;
+}
+
+.txt{
+    text-align: center;
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.search{
+    text-align: center;
+}
+
+.btn-search{
+    margin: 10px;
+}
+
+.input-pkm{
+    width: 250px;
+    height: 25px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    border: 2px solid black;
+}
+.input-pkm::placeholder{
+    color: white;
+}
+
+.pkm-logo{
+    display: block;
+    margin: 30px;
+    width: 10.4rem;
+    
 }

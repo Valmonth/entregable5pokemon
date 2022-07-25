@@ -5,7 +5,7 @@ import { Link, Navigate, useNavigate } from "react-router-dom";
 import { trainerName } from '../store/slices/trainerInput.slice';
 import { useDispatch } from 'react-redux';
 import { useMediaQuery } from 'react-responsive'
-
+import professor from '../img/poak.png'
 const UserInput = () => {
 
     const isDesktopOrLaptop = useMediaQuery({
@@ -35,7 +35,7 @@ const submit = e => {
             
         <h2 className='title-user'>Pokemon Trainer Name</h2>
         <div className='img-professor' >
-            <img className='professor' src='src/img/poak.png' />
+            <img className='professor' src={professor} />
         </div>
         <div className='text-box'>
         <article className='typewriter title-user'>
