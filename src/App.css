@@ -162,58 +162,12 @@ body{
     background-color: var(--card-1-secondary-color);
 }
 
-
-/* Sekiro image and heart-background */
-.sekiro-img-div{
-    background-color: var(--card-2-secondary-color);
-}
-
-.sekiro-img-div img{
-    width: 45%;
-    transform: translateY(7.5%);
-}
-
-.card-2 .like-icon-div{
-    background-color: var(--card-2-secondary-color);
-}
-
-
-/* Dazai image and heart-background */
-.dazai-img-div{
-    background-color: var(--card-3-secondary-color);
-}
-
-.dazai-img-div img{
-    width: 80%;
-    transform: translateY(7.5%);
-}
-
-.card-3 .like-icon-div{
-    background-color: var(--card-3-secondary-color);
-    
-}
-
-/* U4 image and heart-background*/
-.u4-img-div{
-    background-color: var(--card-4-secondary-color);
-}
-
-.u4-img-div img{
-    width: 50%;
-    transform: translateY(7.5%);
-}
-
-.card-4 .like-icon-div{
-    background-color: var(--card-4-secondary-color);
-}
-
 /* ======== text Container Styling general ======== */
 
 .text-container{
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* background-color: yellow; */
     padding: 0 1.5em;
     padding-top: 7em;
     padding-bottom: 1em;
@@ -238,7 +192,7 @@ body{
     color: var(--date-text-color);
 }
 
-/* === Pricing and cart div  ===== */
+
 .pricing-and-cart{
     /* background-color: wheat; */
     width: 100%;
@@ -257,15 +211,6 @@ body{
   display: flex;
   flex-direction: column;
   text-align: right;
-}
-
-.previous-price{
-    font-size: 0.8rem;
-    font-weight: var(--pricing-font-weight);
-    color: var(--previous-price-text-color);
-    text-decoration: line-through;
-    /* background-color: whitesmoke; */
-    text-align: left;
 }
 
 .current-stat_a{
@@ -386,8 +331,7 @@ body{
 
 .pkmTitle{
   color: chocolate;
-  margin-bottom: 19rem;
-  margin-left: 19rem;
+  
 }
 .pkmNumber{
   color: brown;
@@ -442,15 +386,21 @@ body{
 
 .btn-search{
     margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: darkblue;
+    color: white;
+    font-size: 15px;
 }
 
 .input-pkm{
     width: 250px;
-    height: 25px;
+    height: 35px;
     background-color: red;
     color: white;
     text-align: center;
     border: 2px solid black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .input-pkm::placeholder{
     color: white;
@@ -462,3 +412,82 @@ body{
     width: 10.4rem;
     
 }
+.selecction{
+    display: flex;
+    justify-content: center;
+}
+
+select {
+    
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    
+    flex: 1;
+    padding: 0 1em;
+    color: #fff;
+    background-color: gray;
+    background-image: none;
+    cursor: pointer;
+    
+  }
+ 
+  select::-ms-expand {
+    display: none;
+  }
+ 
+  .select {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    border-radius: .25em;
+    overflow: hidden;
+  }
+  /* Arrow */
+  .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    background-color: #34495e;
+    transition: .25s all ease;
+    pointer-events: none;
+  }
+  /* Transition */
+  .select:hover::after {
+    color: #f39c12;
+  }
+
+  .btn-advance{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .btn-a{
+    padding: 10px;
+    margin: 5px;
+  }
+  .btn-b{
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .cont-pkm{
+    border: 1px solid red;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+.backto{
+  border: blue 1px solid;
+  max-width: 20rem;
+  font-size: 15px;
+  margin-right: 1rem;
+}
+  .btn-back{
+    width: 2em;
+  }

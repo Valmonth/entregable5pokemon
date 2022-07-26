@@ -56,11 +56,14 @@ axios.get(e.target.value)
                 placeholder='Type the pokemon name or number'
                 value={pkmSearch}
                 onChange={e => setPkmSearch(e.target.value)}
+                required
                 />
                 <button className='btn-search'>Search Pokemon</button>
             </form>
-            <select onChange={filterPkm}>
-                <option value="">Choose Pokemon Type</option>
+            <div className='selecction'>
+            <article className='select'>
+            <select className='sec' onChange={filterPkm}>
+                <option className='options' value="">Choose Pokemon Type</option>
                 {
                 types.map(typ => (
                    <option key={typ.name} value={typ.url}>{typ.name}</option> 
@@ -68,9 +71,12 @@ axios.get(e.target.value)
                     ))
                     }
             </select>
-            {page === 0 ? <button disabled>Prev Page</button> : <button onClick={()=> setPage(page - 10)}>Prev Page</button>}
-            {page === 1150 ? <button disabled>Next Page</button> : <button onClick={()=> setPage(page + 10)}>Next Page</button> }
-            
+            </article>
+            </div>
+            <div className='btn-advance'>
+            {page === 0 ? <button className='btn-a' disabled>Prev Page</button> : <button className='btn-a' onClick={()=> setPage(page - 10)}>Prev Page</button>}
+            {page === 1150 ? <button className='btn-b' disabled>Next Page</button> : <button className='btn-b' onClick={()=> setPage(page + 10)}>Next Page</button> }
+            </div>
             <div className='container'>
                 {
                     pkms.map(pkm => (

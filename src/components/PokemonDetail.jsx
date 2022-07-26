@@ -7,6 +7,7 @@ import PkmAbi from './PkmDetail/PkmAbi';
 import PkmMoves from './PkmDetail/PkmMoves';
 import PkmStat from './PkmDetail/PkmStat';
 import PkmType from './PkmDetail/PkmType';
+import backbtn from '../img/back.png'
 
 const PokemonDetail = () => {
  
@@ -25,9 +26,9 @@ if(error === "Not Found"){
 }
 /*  console.log(pkmid); */
     return (
-        <div>
-            <div>
-            <Link to="/pokemon">Volver a la Pokedex</Link>
+        <div className='container'>
+            <div className='backto'>
+            <Link to="/pokemon"><img className='btn-back' src={backbtn}/>Volver a la Pokedex</Link>
             </div>
             <Pkm/>
             <PkmType/>

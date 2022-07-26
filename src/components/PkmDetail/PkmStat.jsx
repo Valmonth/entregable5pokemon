@@ -12,10 +12,15 @@ const PkmStat = () => {
        },[])
 console.log(pokemon)
     return (
+        <div>
+            <h3>Statistics</h3>
+        
         <div className='pkmTypes'>
+            
             {pokemon.map(stat=>(
                <div className='typeCard' key={stat.stat.name}> {stat.stat.name} {stat.base_stat}</div> 
             ))}
+        </div>
         </div>
     );
 };

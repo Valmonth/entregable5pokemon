@@ -13,11 +13,11 @@ const Pkm = () => {
     },[])
  
     return (
-        <div className='pkmBox'>
-            <section className='pkmInfo'>
+        <div className='cont-pkm'>
+            <section className=''>
             <h2 className='pkmTitle'>Pokemon Name: {pokemon.name}</h2>
             <p className='pkmNumber'>Pokedex Number: {pokemon.id}</p>
-            <div >
+            <div className=''>
                 <img className='pkmImgInfo' src={pokemon.sprites?.other?.home?.front_default}/>
             </div>
             <div >
