@@ -477,15 +477,17 @@ select {
   }
 
   .cont-pkm{
-    border: 1px solid red;
+    
     text-align: center;
     display: flex;
     align-items: center;
   }
 .backto{
-  border: blue 1px solid;
+ 
   max-width: 20rem;
   font-size: 15px;
+  display: flex;
+  align-items: flex-start;
   margin-right: 1rem;
 }
   .btn-back{
