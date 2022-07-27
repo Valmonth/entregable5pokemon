@@ -13,7 +13,7 @@ const PkmStat = () => {
 console.log(pokemon)
     return (
         <div>
-            <h3>Statistics</h3>
+            <h3 className='titleDetail'>Statistics</h3>
         
         <div className='pkmTypes'>
             

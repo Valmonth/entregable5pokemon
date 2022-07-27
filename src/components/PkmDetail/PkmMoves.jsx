@@ -14,7 +14,7 @@ const PkmMoves = () => {
     console.log(pokemon) 
     return (
         <div>
-            <h3>Moves</h3>
+            <h3 className='titleDetail'>Moves</h3>
         <div className='items'>
             {pokemon.map(moves=>(
               <div className='item'>{moves.move.name}</div>

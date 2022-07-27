@@ -11,28 +11,39 @@ const PokemonItem = ( {pkmUrl} ) => {
  const [pokemon, setPokemon] = useState({})
  const [type, setType] = useState([])
  const [bgcolor, setBgcolor] = useState('bg-card-pk')
+
  useEffect(() =>{
     axios.get(pkmUrl)
     .then(res => setPokemon(res.data))
     
- },[])
- useEffect(() =>{
-    axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon.id}`)
-    .then(res => setType(res.data?.types))
- },[pokemon])
+ },[]);
+ 
+ console.log(type)
+useEffect(() =>{
+        axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon.id}`)
+        .then(res => setType(res.data?.types))
+     },[pokemon])
+ 
+ /* console.log(pokemon) */
 
 
  const navigate = useNavigate();
     return (
         <div className='card-1 card-div' onClick={() => navigate(`/pokemonDetail/${pokemon.id}`)}>
-            <div className={`gow-img-div img-div ${bgcolor}`}>
+            <div className={`gow-img-div img-div ${bgcolor}` }>
                 <img className='pkmImg' src={pokemon.sprites?.other?.home?.front_default}/>
             </div>
+            
             <div className='text-container'>
             <h3 className='item-name'>{pokemon.name}</h3>
+             
+            {/*  {(type).map(typ =>{
+                typ?.type.name
+             })} */}
             <p className='date'>Type: {type.map(typ =>(
                <p className='pkmTypes' key={typ?.type?.url}>{typ?.type?.name}</p>
             ))}</p>
+
             <div className='stats_a'>
             <p className='current-stat_a'>Hp: {pokemon.stats?.[0].base_stat}</p>
             <p className='current-stat_a'>Attack: {pokemon.stats?.[1].base_stat}</p>

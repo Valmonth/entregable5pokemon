@@ -14,7 +14,7 @@ const PkmAbi = () => {
        
     return (
         <div>
-            <h3>Ability</h3>
+            <h3 className='titleDetail'>Ability</h3>
         <div className='pkmTypes'>
             {pokemon.map(abi=>(
                <div className='typeCard' key={abi.ability?.name}> {abi.ability?.name}</div>

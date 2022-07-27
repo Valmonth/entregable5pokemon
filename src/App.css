@@ -151,6 +151,9 @@ body{
 .bg-ice{
     background-color: var(--pkm-ice);
 }
+.bg-normal{
+  background-color: var(--pkm-normal);
+}
 
 .gow-img-div img{
     width: 65%;
@@ -371,7 +374,11 @@ body{
 
 .title{
     text-align: center;
-    font-size: 33px;
+    font-size: 3em;
+    background: linear-gradient(yellow,red);
+    -webkit-background-clip: text;
+    color: transparent; 
+    text-transform:capitalize;
 }
 
 .txt{
@@ -408,8 +415,9 @@ body{
 
 .pkm-logo{
     display: block;
-    margin: 30px;
-    width: 10.4rem;
+    margin-left: 8rem;
+    margin-bottom: 1.3rem;
+    width: 12.4rem;
     
 }
 .selecction{
@@ -470,20 +478,20 @@ select {
   .btn-a{
     padding: 10px;
     margin: 5px;
+    color: red;
   }
   .btn-b{
     padding: 10px;
     margin: 5px;
+    color: #b18606;
   }
 
   .cont-pkm{
-    
     text-align: center;
     display: flex;
     align-items: center;
   }
 .backto{
- 
   max-width: 20rem;
   font-size: 15px;
   display: flex;
@@ -493,3 +501,33 @@ select {
   .btn-back{
     width: 2em;
   }
+
+.exitto{
+  max-width: 4rem;
+  font-size: 10px;
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+}
+.exitto:hover{
+  max-width: 5rem;
+}
+
+.exittxt{
+  color: red;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+.exitto:hover{
+  color: green;
+}
+
+.titleDetail{
+  font-size: 2rem;
+  background: linear-gradient(red, yellow, blue, green, white);
+  -webkit-background-clip: text;
+   color: transparent; 
+   margin: 4px;
+}

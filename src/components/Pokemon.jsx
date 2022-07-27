@@ -6,6 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import PokemonItem from './PokemonItem';
 import logo from '../img/pokemon.png'
+import exitbtn from '../img/xti.webp'
 
 
 const Pokemon = () => {
@@ -33,7 +34,6 @@ const [pkmSearch, setPkmSearch] = useState("");
     navigate(`/pokemonDetail/${pkmSearch.toLowerCase()}/`)
  }
  const filterPkm = e =>{
-alert("Se elegie " + e.target.value)
 axios.get(e.target.value)
 .then(res => setPkms(res.data.pokemon))
  }
@@ -44,7 +44,7 @@ axios.get(e.target.value)
 /* console.log(pkms) */
     return (
         <div >
-            <div><Link to="/">Exit From Pokedex</Link></div>
+            <div><Link to="/" className='exittxt'><img src={exitbtn} className='exitto'/>Exit From Pokedex</Link></div>
             <div>
                 <img className='pkm-logo' src={logo} alt="" />
             </div>
@@ -74,8 +74,8 @@ axios.get(e.target.value)
             </article>
             </div>
             <div className='btn-advance'>
-            {page === 0 ? <button className='btn-a' disabled>Prev Page</button> : <button className='btn-a' onClick={()=> setPage(page - 10)}>Prev Page</button>}
-            {page === 1150 ? <button className='btn-b' disabled>Next Page</button> : <button className='btn-b' onClick={()=> setPage(page + 10)}>Next Page</button> }
+            {page === 0 ? <button className='btn-a' disabled>Prev Page</button> : <button className='btn-b' onClick={()=> setPage(page - 10)}>Prev Page</button>}
+            {page === 1150 ? <button className='btn-a' disabled>Next Page</button> : <button className='btn-b' onClick={()=> setPage(page + 10)}>Next Page</button> }
             </div>
             <div className='container'>
                 {
